@@ -13,7 +13,7 @@ Year_Dict = {
 
 for season in Year_Dict:
 
-    filename = '/home/russelljames/vscode/python_scripts-master/NBA_Season_Data_{Year}.csv'.format(Year = season)
+    filename = '/home/russelljames/vscode/python_scripts/NBA_Season_Data_{Year}.csv'.format(Year = season)
 
     filepath = Path(filename)
 
