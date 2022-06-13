@@ -44,7 +44,7 @@ for year in Years:
         for player_salary in salary:
             salary1.append(player_salary)
     
-    salary_data = {"Player" : player_name1, "Salary" : salary1}    
+    salary_data = {"Player Name" : player_name1, "Salary" : salary1}    
     salary_df = pd.DataFrame(salary_data)
         
 
