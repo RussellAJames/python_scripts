@@ -32,7 +32,7 @@ for season in Year_Dict:
     pattern_team = r'.html\">([A-Z]{3})\<|data\-stat\=\"team_id\"\>([A-Z]{3})\<'
 
     ### Player's position and season stats
-    pattern_pos = r'data\-stat\=\"pos\"\>([A-Z]+)\<'
+    pattern_pos = r'data\-stat\=\"pos\"\>(\w+)'
     pattern_games = r'data\-stat\=\"g\"\>([0-9]+)\<'
     pattern_mp = r'data\-stat\=\"mp\"\>([0-9]+)\<'
     pattern_age = r'data\-stat\=\"age\"\>([0-9]+)\<'
@@ -52,6 +52,7 @@ for season in Year_Dict:
     # Lists for removing blanks from different groups
     name_noblanks = []
     team_noblanks = []
+
 
     name = re.findall(pattern_name,str(string))
     team = re.findall(pattern_team,str(string))
@@ -83,6 +84,10 @@ for season in Year_Dict:
         for f in i:
             if len(f) !=0:
                 team_noblanks.append(f)
+
+
+
+
 
     # Adding to dictionary
     Season_data = {"Player name" :name_noblanks, "Team":team_noblanks,"Position" : position,"Games":games,"Minutes Played":minutes_played,
