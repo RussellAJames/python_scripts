@@ -12,7 +12,7 @@ Years = [2020,2021,2022]
 
 for year in Years:
     filename = '/home/russelljames/vscode/python_scripts/NBA_Salary_Data_{Year}.csv'.format(Year = year)
-    print('hello')
+
     filepath = Path(filename)
     player_name1 = []
     salary1 = []
@@ -20,8 +20,7 @@ for year in Years:
     
 
     for team in Teams:
-        print(team)
-        print(year)
+
         Team_Selection = "https://www.basketball-reference.com/teams/{Team}/{Year}.html".format(Team = team,Year = year)
         raw_data = urlopen(Team_Selection)
         unparsed = raw_data.read()
@@ -48,7 +47,7 @@ for year in Years:
     salary_data = {"Player" : player_name1, "Salary" : salary1}    
     salary_df = pd.DataFrame(salary_data)
         
-    print(salary_df)
+
         
     salary_df.to_csv(filepath , index=False)
 
