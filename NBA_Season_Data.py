@@ -85,7 +85,7 @@ for season in Year_Dict:
                 team_noblanks.append(f)
 
     # Adding to dictionary
-    Season_data = {"Player name" :name_noblanks, "Team":team_noblanks,"Games":games,"Minutes Played":minutes_played,
+    Season_data = {"Player name" :name_noblanks, "Team":team_noblanks,"Position" : position,"Games":games,"Minutes Played":minutes_played,
     "Age":age,"Field Goals":field_goals,"Field Goal Attempts":field_goal_attempts, "Points":points,"Turnover":turnovers,"Assists":assists,
     "Offensive Rebounds":offensive_rebounds,"Defensive Rebounds" :defensive_rebounds, "Total Rebounds":total_rebounds, "Steals":steals,
     "Freethrows":freethrows,"Freethrow Attempts":freethrow_attempts,"Blocks":blocks}
