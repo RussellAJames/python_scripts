@@ -50,5 +50,5 @@ for year in Years:
         
     print(salary_df)
         
-    salary_df.to_csv(filepath)
+    salary_df.to_csv(filepath , index=False)
 

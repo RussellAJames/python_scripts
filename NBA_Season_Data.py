@@ -98,4 +98,4 @@ for season in Year_Dict:
     NBA_df = pd.DataFrame(Season_data)
 
     # Exporting DataFrame to csv
-    NBA_df.to_csv(filepath)
+    NBA_df.to_csv(filepath, index=False)
